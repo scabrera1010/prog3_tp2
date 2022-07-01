@@ -305,7 +305,6 @@ public class GrafoUser<T> implements Grafo<T> {
 	private GrafoUser subGrafo(ArrayList<String> lista) {
 		GrafoUser g=new GrafoUser();
 		for(int i=0;i<lista.size()-1;i++) {
-			System.out.println(lista.get(i)+"-"+lista.get(i+1));
 			g.agregarVertice(lista.get(i),lista.get(i+1));
 		}
 		return g;

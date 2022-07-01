@@ -8,9 +8,23 @@ public class main {
       GrafoUser grafoUser=new GrafoUser<>();
       reader.read(grafoUser);
 
-    GrafoUser g= (GrafoUser) grafoUser.dfs("viajes");
-    System.out.println("Nuevo grafo con generos a fine "+g.getV());
+    /***********************/
+    /*       Servicio 1    */
+    /***********************/
+    System.out.println("Los generos mas buscados son " + grafoUser.getMasBuscado("cine", 4));
 
-    }
+    /***********************/
+    /*       Servicio 2    */
+    /***********************/
+    System.out.println("La secuencia de generos a partir del genero cine es: "+grafoUser.secuenciaDeGeneros("cine"));
+
+
+    /***********************/
+    /*       Servicio 3    */
+    /***********************/
+    GrafoUser g= (GrafoUser) grafoUser.dfs("viajes");
+    System.out.println("Nuevo grafo con generos a fines "+g.getV());
+    
+  }
 
 }
